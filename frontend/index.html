@@ -1,0 +1,128 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>TestPilot | Autonomous QA Platform</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <div class="logo">TestPilot<span>.</span></div>
+        <div class="nav-status">
+            <span class="status-dot"></span>
+            AI Engine Ready
+        </div>
+    </header>
+
+    <main class="container">
+
+        <section class="hero">
+            <p class="eyebrow">AUTONOMOUS QUALITY ASSURANCE</p>
+            <h1>Test Smarter. Ship Better.</h1>
+            <p class="subtitle">
+                Transform application requirements into intelligent,
+                structured software test cases using AI agents.
+            </p>
+        </section>
+
+        <section class="workspace">
+
+            <div class="section-heading">
+                <h2>Generate Test Cases</h2>
+                <p>Describe your application and its requirements.</p>
+            </div>
+
+            <form id="testForm">
+
+                <div class="form-group">
+                    <label for="applicationName">Application Name</label>
+                    <input
+                        type="text"
+                        id="applicationName"
+                        placeholder="e.g. Online Shopping System"
+                        required
+                    >
+                </div>
+
+                <div class="form-group">
+                    <label for="requirements">Application Requirements</label>
+                    <textarea
+                        id="requirements"
+                        rows="7"
+                        placeholder="Enter each requirement on a new line..."
+                        required
+                    ></textarea>
+                </div>
+
+                <button type="submit" id="generateButton">
+                    Generate Test Cases
+                </button>
+
+                <p id="message"></p>
+
+            </form>
+
+        </section>
+
+      <section id="resultsSection">
+    <h2>Generated Test Cases</h2>
+
+    <p id="resultSummary"></p>
+
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h3 id="totalCount">0</h3>
+            <p>Total Test Cases</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="highCount">0</h3>
+            <p>High Priority</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="mediumCount">0</h3>
+            <p>Medium Priority</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="lowCount">0</h3>
+            <p>Low Priority</p>
+        </div>
+
+    </div>
+
+    <div class="filter-container">
+
+    <input
+        type="text"
+        id="searchTestCases"
+        placeholder="Search test cases..."
+    >
+
+    <select id="priorityFilter">
+        <option value="ALL">All Priorities</option>
+        <option value="HIGH">High Priority</option>
+        <option value="MEDIUM">Medium Priority</option>
+        <option value="LOW">Low Priority</option>
+    </select>
+
+</div>
+
+<div id="testCasesContainer"></div>
+</section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
